@@ -1,0 +1,136 @@
+.wrap {
+  padding: 16px;
+  display: grid;
+  gap: 14px;
+}
+
+.h1 {
+  margin: 0;
+  font-size: 1.3rem;
+}
+
+.section {
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 12px;
+  background: rgba(245, 158, 11, 0.06);
+}
+
+.h2 {
+  margin: 0 0 10px;
+  font-size: 1.05rem;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 12px;
+  align-items: start;
+}
+
+.row {
+  display: flex;
+  justify-content: space-between;
+  gap: 12px;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.label {
+  font-weight: 800;
+}
+
+.switch {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  padding: 10px 12px;
+  border-radius: 999px;
+}
+
+.knob {
+  width: 34px;
+  height: 20px;
+  border-radius: 999px;
+  border: 1px solid var(--border);
+  background: rgba(107, 114, 128, 0.25);
+  position: relative;
+}
+
+.knob::after {
+  content: "";
+  position: absolute;
+  top: 2px;
+  left: 2px;
+  width: 14px;
+  height: 14px;
+  border-radius: 999px;
+  background: var(--ocean-surface);
+  border: 1px solid var(--border);
+  transition: transform 160ms ease;
+}
+
+.on {
+  background: rgba(37, 99, 235, 0.35);
+  border-color: rgba(37, 99, 235, 0.35);
+}
+
+.on::after {
+  transform: translateX(14px);
+}
+
+.switchText {
+  font-weight: 800;
+}
+
+.indicators {
+  border: 1px solid var(--border);
+  border-radius: 14px;
+  padding: 10px 12px;
+  background: var(--ocean-surface);
+  display: grid;
+  gap: 8px;
+}
+
+.checkRow {
+  display: inline-flex;
+  gap: 10px;
+  align-items: center;
+}
+
+.modalOverlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(17, 24, 39, 0.55);
+  display: grid;
+  place-items: center;
+  z-index: 2400;
+  padding: 16px;
+}
+
+.modal {
+  width: min(520px, 100%);
+  background: var(--ocean-surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 16px;
+  box-shadow: var(--shadow);
+}
+
+.h3 {
+  margin: 0 0 8px;
+}
+
+.modalActions {
+  display: flex;
+  justify-content: flex-end;
+  gap: 10px;
+  flex-wrap: wrap;
+  margin-top: 12px;
+}
+
+@media (max-width: 900px) {
+  .grid {
+    grid-template-columns: 1fr;
+  }
+}

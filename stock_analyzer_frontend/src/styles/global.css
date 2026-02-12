@@ -1,0 +1,189 @@
+:root {
+  --ocean-primary: #2563eb;
+  --ocean-secondary: #f59e0b;
+  --ocean-error: #ef4444;
+  --ocean-bg: #f9fafb;
+  --ocean-surface: #ffffff;
+  --ocean-text: #111827;
+  --ocean-muted: #6b7280;
+
+  --radius: 14px;
+  --shadow: 0 8px 20px rgba(17, 24, 39, 0.08);
+  --shadow-soft: 0 2px 10px rgba(17, 24, 39, 0.08);
+
+  --focus-ring: 0 0 0 3px rgba(37, 99, 235, 0.35);
+  --border: rgba(17, 24, 39, 0.12);
+
+  color-scheme: light;
+}
+
+html[data-theme="dark"] {
+  --ocean-bg: #0b1220;
+  --ocean-surface: #0f1b33;
+  --ocean-text: #e5e7eb;
+  --ocean-muted: #9ca3af;
+  --border: rgba(229, 231, 235, 0.14);
+
+  color-scheme: dark;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  height: 100%;
+}
+
+body {
+  margin: 0;
+  font-family:
+    ui-sans-serif,
+    system-ui,
+    -apple-system,
+    Segoe UI,
+    Roboto,
+    Helvetica,
+    Arial,
+    "Apple Color Emoji",
+    "Segoe UI Emoji";
+  background: linear-gradient(180deg, rgba(37, 99, 235, 0.08), rgba(249, 250, 251, 0.4) 40%, var(--ocean-bg) 80%);
+  color: var(--ocean-text);
+}
+
+a {
+  color: inherit;
+}
+
+button,
+input,
+select,
+textarea {
+  font: inherit;
+}
+
+:focus-visible {
+  outline: none;
+  box-shadow: var(--focus-ring);
+  border-radius: 8px;
+}
+
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}
+
+.skip-link {
+  position: absolute;
+  left: -999px;
+  top: 8px;
+  background: var(--ocean-surface);
+  color: var(--ocean-text);
+  padding: 10px 12px;
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  box-shadow: var(--shadow-soft);
+  z-index: 10000;
+}
+
+.skip-link:focus {
+  left: 8px;
+}
+
+.container {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.card {
+  background: var(--ocean-surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow-soft);
+}
+
+.badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 6px 10px;
+  border-radius: 999px;
+  border: 1px solid var(--border);
+  background: rgba(245, 158, 11, 0.12);
+}
+
+.btn {
+  border: 1px solid var(--border);
+  background: var(--ocean-surface);
+  color: var(--ocean-text);
+  padding: 10px 12px;
+  border-radius: 12px;
+  box-shadow: none;
+  cursor: pointer;
+}
+
+.btn:hover {
+  border-color: rgba(37, 99, 235, 0.4);
+}
+
+.btn.primary {
+  background: linear-gradient(180deg, rgba(37, 99, 235, 0.98), rgba(37, 99, 235, 0.92));
+  color: white;
+  border-color: rgba(37, 99, 235, 0.4);
+}
+
+.btn.secondary {
+  background: rgba(245, 158, 11, 0.12);
+  border-color: rgba(245, 158, 11, 0.35);
+}
+
+.btn.danger {
+  background: rgba(239, 68, 68, 0.12);
+  border-color: rgba(239, 68, 68, 0.4);
+}
+
+.btn:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+.field {
+  display: grid;
+  gap: 6px;
+}
+
+.field label {
+  font-weight: 600;
+  font-size: 0.95rem;
+}
+
+.input,
+.select,
+.textarea {
+  border: 1px solid var(--border);
+  background: var(--ocean-surface);
+  color: var(--ocean-text);
+  padding: 10px 12px;
+  border-radius: 12px;
+}
+
+.help-text {
+  color: var(--ocean-muted);
+  font-size: 0.92rem;
+  line-height: 1.3;
+}
+
+hr {
+  border: 0;
+  border-top: 1px solid var(--border);
+  margin: 16px 0;
+}

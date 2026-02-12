@@ -1,0 +1,70 @@
+.wrap {
+  padding: 16px;
+  display: grid;
+  gap: 12px;
+}
+
+.h2 {
+  margin: 0;
+  font-size: 1.05rem;
+}
+
+.grid {
+  display: grid;
+  gap: 12px;
+}
+
+.metric {
+  border: 1px solid var(--border);
+  border-radius: 14px;
+  padding: 12px;
+  background: rgba(37, 99, 235, 0.04);
+}
+
+.label {
+  color: var(--ocean-muted);
+  font-weight: 700;
+  font-size: 0.9rem;
+}
+
+.value {
+  margin-top: 6px;
+  font-size: 1.05rem;
+  font-weight: 800;
+}
+
+.muted {
+  color: var(--ocean-muted);
+  font-weight: 600;
+}
+
+.up {
+  color: #2563eb;
+}
+
+.down {
+  color: #ef4444;
+}
+
+.sideways {
+  color: #f59e0b;
+}
+
+.meter {
+  margin-top: 10px;
+  height: 10px;
+  border-radius: 999px;
+  background: rgba(107, 114, 128, 0.18);
+  overflow: hidden;
+}
+
+.meterFill {
+  height: 100%;
+  background: linear-gradient(90deg, rgba(245, 158, 11, 0.9), rgba(37, 99, 235, 0.95));
+  border-radius: 999px;
+}
+
+.patternList {
+  margin: 8px 0 0;
+  padding-left: 18px;
+}

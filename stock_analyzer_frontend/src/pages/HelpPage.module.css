@@ -1,0 +1,109 @@
+.wrap {
+  padding: 16px;
+  display: grid;
+  gap: 14px;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  gap: 12px;
+  flex-wrap: wrap;
+  align-items: center;
+}
+
+.h1 {
+  margin: 0;
+  font-size: 1.3rem;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: 320px 1fr;
+  gap: 12px;
+}
+
+.sidebar {
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 12px;
+  background: rgba(37, 99, 235, 0.03);
+  display: grid;
+  gap: 12px;
+}
+
+.topicList {
+  display: grid;
+  gap: 8px;
+}
+
+.topicBtn {
+  text-align: left;
+  border: 1px solid var(--border);
+  background: var(--ocean-surface);
+  border-radius: 14px;
+  padding: 10px 12px;
+  cursor: pointer;
+}
+
+.topicBtn:hover {
+  border-color: rgba(37, 99, 235, 0.35);
+}
+
+.active {
+  border-color: rgba(245, 158, 11, 0.6);
+  background: rgba(245, 158, 11, 0.1);
+}
+
+.topicTitle {
+  font-weight: 900;
+}
+
+.topicMeta {
+  color: var(--ocean-muted);
+  font-weight: 600;
+  font-size: 0.9rem;
+  margin-top: 2px;
+}
+
+.content {
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 12px;
+  background: var(--ocean-surface);
+  min-width: 0;
+}
+
+.h2 {
+  margin: 0;
+  font-size: 1.15rem;
+}
+
+.categoryBadge {
+  margin-top: 8px;
+}
+
+.md {
+  margin-top: 10px;
+  line-height: 1.55;
+}
+
+.md h3 {
+  margin-top: 18px;
+}
+
+.md a {
+  color: var(--ocean-primary);
+  font-weight: 800;
+}
+
+.empty {
+  color: var(--ocean-muted);
+  padding: 10px 0;
+}
+
+@media (max-width: 900px) {
+  .grid {
+    grid-template-columns: 1fr;
+  }
+}
